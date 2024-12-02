@@ -9,7 +9,10 @@ import (
 )
 
 func main() {
+	fmt.Println("Day 2")
+	fmt.Println("Part 1")
 	part1()
+	fmt.Println("Part 2")
 	part2()
 }
 
@@ -46,7 +49,6 @@ func part1() {
 
 			if !isSafe(level1, level2, increase) {
 				issafe = false
-				fmt.Println(report, "PARA:", level1, level2, increase)
 				break
 			}
 
@@ -137,11 +139,9 @@ func part2() {
 		for i := 0; i < len(shitlevel); i++ {
 			shitsafe := true
 			shitcrease := 0
-			fmt.Println(shitlevel)
 			holdcopyshit := make([]string, len(shitlevel))
 			copy(holdcopyshit, shitlevel)
 			copyshit := remove(holdcopyshit, i)
-			fmt.Println(copyshit)
 
 			for i := 0; i < len(copyshit)-1; i++ {
 				level1, err1 := strconv.Atoi(string(copyshit[i]))
